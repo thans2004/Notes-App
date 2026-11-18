@@ -1,0 +1,668 @@
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  background: #f7f7fb;
+  color: #24243a;
+  transition: 0.3s;
+}
+
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #ececf3;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 35px;
+}
+
+.brand h2 {
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.brand h2 span {
+  color: #7655e8;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  background: #7655e8;
+  color: white;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+}
+
+.add-btn,
+.create-btn,
+.save-btn {
+  background: #7655e8;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.add-btn:hover,
+.create-btn:hover,
+.save-btn:hover {
+  background: #6040ce;
+  transform: translateY(-2px);
+}
+
+.menu-label {
+  font-size: 11px;
+  color: #a0a0b2;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 35px 0 14px 10px;
+}
+
+.side-link {
+  width: 100%;
+  padding: 13px 12px;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #77778d;
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.side-link span {
+  margin-left: auto;
+  font-size: 12px;
+}
+
+.side-link:hover,
+.side-link.active {
+  background: #f0edff;
+  color: #7655e8;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.sidebar-bottom p {
+  font-size: 11px;
+  color: #a0a0b2;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 42px;
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 55px;
+}
+
+.welcome {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #9999ad;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.header h1 {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.header h1 span {
+  color: #7655e8;
+}
+
+.subtitle {
+  color: #9696a9;
+  margin-top: 9px;
+  font-size: 14px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-box {
+  width: 380px;
+  height: 48px;
+  background: white;
+  border: 1px solid #ececf3;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  gap: 10px;
+  color: #9999aa;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font-size: 13px;
+}
+
+.mobile-add {
+  display: none;
+}
+
+.notes-section {
+  width: 100%;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.section-heading h2 {
+  font-size: 23px;
+  font-weight: 750;
+}
+
+.section-heading p {
+  font-size: 13px;
+  color: #9999ad;
+  margin-top: 7px;
+}
+
+.create-btn {
+  padding: 12px 18px;
+  font-size: 13px;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.note-card {
+  min-height: 255px;
+  padding: 23px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+  transition: 0.25s;
+  animation: fadeIn 0.35s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(40, 30, 80, 0.09);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.note-card.purple { background: #f0eaff; }
+.note-card.blue { background: #e7f2ff; }
+.note-card.pink { background: #ffeaf1; }
+.note-card.green { background: #e6f8ed; }
+.note-card.yellow { background: #fff5d9; }
+
+.note-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.category-tag {
+  background: rgba(255,255,255,0.7);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  color: #777;
+  font-weight: 600;
+}
+
+.pin-btn {
+  border: none;
+  background: transparent;
+  color: #888;
+  cursor: pointer;
+}
+
+.pin-btn.pinned {
+  color: #7655e8;
+}
+
+.note-card h3 {
+  font-size: 19px;
+  margin-bottom: 12px;
+  color: #28243a;
+  overflow-wrap: anywhere;
+}
+
+.note-description {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #77758a;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  /* -webkit-line-clamp: 4; */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.note-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.note-tags span {
+  font-size: 11px;
+  color: #7655e8;
+  font-weight: 600;
+}
+
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 20px;
+  color: #9692a5;
+  font-size: 11px;
+}
+
+.note-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.note-actions button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: rgba(255,255,255,0.7);
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: #777;
+}
+
+.note-actions button:hover {
+  color: #7655e8;
+}
+
+.empty-state {
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.empty-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 25px;
+  background: #eee9ff;
+  color: #7655e8;
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+}
+
+.empty-state h2 {
+  font-size: 23px;
+}
+
+.empty-state p {
+  color: #9999ad;
+  margin: 10px 0 25px;
+  font-size: 14px;
+}
+
+.app-footer {
+  margin-top: 55px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #aaaabb;
+  font-size: 12px;
+}
+
+/* Modal */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(25, 20, 50, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+}
+
+.note-modal {
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.modal-header h2 {
+  font-size: 22px;
+}
+
+.modal-header button {
+  border: none;
+  background: #f2f1f7;
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.note-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.note-modal label {
+  font-size: 13px;
+  font-weight: 650;
+  margin-top: 5px;
+}
+
+.note-modal input,
+.note-modal textarea,
+.note-modal select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #e7e5ef;
+  border-radius: 10px;
+  outline: none;
+  font-family: inherit;
+  font-size: 13px;
+  background: white;
+  color: #333;
+}
+
+.note-modal input:focus,
+.note-modal textarea:focus,
+.note-modal select:focus {
+  border-color: #7655e8;
+  box-shadow: 0 0 0 3px rgba(118,85,232,0.1);
+}
+
+.note-modal textarea {
+  resize: vertical;
+}
+
+.color-options {
+  display: flex;
+  gap: 14px;
+  padding: 8px 0;
+}
+
+.color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  outline: 2px solid transparent;
+}
+
+.color-circle.selected {
+  outline-color: #7655e8;
+}
+
+.color-circle.purple { background: #c9b5ff; }
+.color-circle.blue { background: #9ecaff; }
+.color-circle.pink { background: #ffb4ce; }
+.color-circle.green { background: #9ce4b4; }
+.color-circle.yellow { background: #ffdf82; }
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.cancel-btn {
+  border: 1px solid #e7e5ef;
+  background: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.save-btn {
+  padding: 12px 22px;
+}
+
+/* Dark theme */
+
+.app-container.dark {
+  background: #171725;
+  color: #f5f3ff;
+}
+
+.dark .sidebar,
+.dark .search-box {
+  background: #222233;
+  border-color: #353548;
+}
+
+.dark .side-link {
+  color: #b8b6cc;
+}
+
+.dark .side-link.active,
+.dark .side-link:hover {
+  background: #35304f;
+  color: #b9a6ff;
+}
+
+.dark .search-box input {
+  color: white;
+}
+
+.dark .note-card {
+  filter: brightness(0.85);
+}
+
+.dark .note-card h3 {
+  color: #28243a;
+}
+
+.dark .section-heading p,
+.dark .subtitle {
+  color: #aaa8bf;
+}
+
+.dark .note-modal {
+  background: #252538;
+  color: white;
+}
+
+.dark .note-modal input,
+.dark .note-modal textarea,
+.dark .note-modal select {
+  background: #333348;
+  color: white;
+  border-color: #46465c;
+}
+
+.dark .cancel-btn {
+  background: #333348;
+  color: white;
+  border-color: #46465c;
+}
+
+.dark .modal-header button {
+  background: #38384d;
+  color: white;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+  .notes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sidebar {
+    width: 230px;
+  }
+
+  .main-content {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .sidebar {
+    width: 75px;
+    padding: 20px 10px;
+    align-items: center;
+  }
+
+  .brand h2,
+  .menu-label,
+  .side-link span,
+  .side-link:not(.theme-btn),
+  .sidebar-bottom p,
+  .add-btn {
+    font-size: 0;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  .side-link {
+    justify-content: center;
+    padding: 13px 5px;
+  }
+
+  .side-link span {
+    display: none;
+  }
+
+  .main-content {
+    padding: 22px 15px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 35px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .header-actions,
+  .search-box {
+    width: 100%;
+  }
+
+  .mobile-add {
+    display: grid;
+    place-items: center;
+    min-width: 45px;
+    height: 45px;
+    background: #7655e8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+  }
+
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    gap: 10px;
+  }
+
+  .create-btn {
+    padding: 11px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 420px) {
+  .section-heading h2 {
+    font-size: 19px;
+  }
+
+  .note-modal {
+    padding: 20px;
+  }
+}
